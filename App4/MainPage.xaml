@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="App4.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App4"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="500" Margin="0,50,0,0" Background="#FF006493" BorderThickness="0" BorderBrush="Black">
+
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,14,0,0" TextWrapping="Wrap" Text="" Width="380" Height="25" PlaceholderText="Skriv något" SelectionHighlightColor="White" FontFamily="Consolas" KeyDown="on_KeyDown" BorderBrush="White" Foreground="White"/>
+            <Button x:Name="button" Content="Lägg till" HorizontalAlignment="Stretch" Width="Auto" Margin="390,14,5,0" VerticalAlignment="Top" Click="button_Click" Background="White" FontFamily="Consolas" Height="32" BorderBrush="White" Foreground="#FF0A0A0A" FontSize="15" RenderTransformOrigin="0.347,0.578"/>
+            <Button x:Name="delete_button" Content="Ta bort markerade" Margin="5,0,0,5" VerticalAlignment="Bottom" Click="delete_button_Click" Width="219" FontFamily="Consolas" Background="White" BorderBrush="White"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" Margin="500,0,0,0" VerticalAlignment="Stretch" Width="Auto" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="222*"/>
+                <ColumnDefinition Width="559*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="listView" Height="Auto" Margin="20,50,20,0" HorizontalAlignment="Stretch" Width="Auto" VerticalAlignment="Top" SelectionMode="Multiple" FontFamily="Consolas" Background="White" BorderThickness="1" Foreground="White" CanReorderItems="True" CanDragItems="True" IsSynchronizedWithCurrentItem="False" Grid.ColumnSpan="2"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" Height="50" VerticalAlignment="Top" Width="Auto" Background="#FF006493" BorderThickness="0" BorderBrush="Black">
+            <Image x:Name="image" Source="Food-List-Ingredients-icon.png" HorizontalAlignment="Left" Height="72" Margin="1,1,0,0" VerticalAlignment="Center" Width="43"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="49,6,0,4" TextWrapping="Wrap" Text="Att göra-lista" VerticalAlignment="Center" Height="40" Width="247" FontFamily="Consolas" FontSize="32" FontWeight="Bold" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Page>
